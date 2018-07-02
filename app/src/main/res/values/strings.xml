@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Catan Timer</string>
+
+    <!-- Button text -->
+    <string name="start_button_text">Start</string>
+    <string name="robber_start_button_text">Robber Start</string>
+    <string name="add_start_time_text">+%1$d seconds to start</string>
+    <string name="sub_start_time_text">-%1$d seconds to start</string>
+    <string name="pause_button_text">Pause</string>
+    <string name="unpause_button_text">Unpause</string>
+    <string name="reset_button_text">Reset</string>
+    <string name="restart_button_text">Restart</string>
+    <string name="robber_restart_button_text">Robber Restart</string>
+    <string name="add_time_text">+%1$d seconds</string>
+    <string name="sub_time_text">-%1$d seconds</string>
+
+
+    <!-- Time -->
+    <string name="default_time_text">1:00</string>
+    <string name="default_add_time_text">+15 seconds</string>
+    <string name="default_sub_time_text">-15 seconds</string>
+    <string name="default_add_start_time_text">+15 seconds to start</string>
+    <string name="default_sub_start_time_text">-15 seconds to start</string>
+    <string name="time_text">%1$d:%2$02d</string>
+    <string name="finished_text">Stop!</string>
+</resources>
