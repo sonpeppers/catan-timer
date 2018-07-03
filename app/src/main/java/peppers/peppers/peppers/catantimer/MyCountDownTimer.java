@@ -2,8 +2,8 @@ package peppers.peppers.peppers.catantimer;
 
 import android.os.CountDownTimer;
 
-// Improves android.os.CountDownTimer by implementing pause/unpause, restart, reset,
-// and increase/decrease time functionality on top of the existing start/stop behavior.
+// Adds functionality to android.os.CountDownTimer by implementing pause/unpause,
+// restart, reset, increase/decrease time on top of the existing start/stop behavior.
 // Also allows you to specify the maximum interval the timer should update,
 // as well as the maximum countdown duration.
 public abstract class MyCountDownTimer {

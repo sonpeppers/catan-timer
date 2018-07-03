@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.media.MediaPlayer;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridLayout;
@@ -86,9 +87,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void updateTimeMs() {
-        long time = (currCountDownTimeMs / 1000);
-        if (!notYetStarted) {
-            time += 1;
+
+        long time;
+        if (notYetStarted) {
+            time = currCountDownTimeMs / 1000;
+        }
+        else {
+            // fuzz the time so if onTick is called before any change to the starting time,
+            // there isn't an unexpected off by 1 second difference due to modulo
+            time = ((currCountDownTimeMs - 1) / 1000) + 1;
         }
 
         long seconds = time % 60;
@@ -158,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
             timer.reset();
         }
 
-        currCountDownTimeMs = timer.getCurrentCountDownTimeMs();
+        currCountDownTimeMs = normalCountDownTimeMs;
         showNotYetStartedUI();
         pauseUnpauseButton.setText(getResources().getString(R.string.pause_button_text));
         updateTimeMs();
